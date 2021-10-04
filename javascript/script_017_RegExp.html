@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_017_RegExp</title>
+</head>
+<body>
+<script type="text/javascript">
+var str = "The BEst things in best life are best free";
+
+//대소문자구분
+//19
+document.write(str.search(/best/)+"<br/>");
+
+//대문소자 구분안함
+//4
+document.write(str.search(/best/i)+"<br/>");
+document.write("<hr/>");
+
+//best
+document.write(str.match(/best/) + "<br/>");
+//best,best
+document.write(str.match(/best/g) + "<br/>");
+//Best,best,best
+document.write(str.match(/best/gi) + "<br/>");
+
+var patt=/e/;
+document.write(patt.test(str) +"<br/>"); //true
+
+patt=/y/i;
+document.write(patt.test(str) +"<br/>"); //false
+
+//일치하는 값이 없으면 null을 리턴한다.
+document.write(patt.exec(str) +"<br/>"); //null
+//Tests for a match in a string. Returns the first match
+document.write(/e/.exec(str)+"<br/>"); //e
+document.write("<hr/>");
+
+var ex=new RegExp("e");
+document.write(ex.test(str)+"<br/>");//true
+document.write(ex.exec(str)+"<br/>"); //e
+      //RegExp("검색문자열", "옵션")
+ex=new RegExp("F","ig");
+document.write(ex.test(str)+"<br/>"); //true
+</script>
+</body>
+</html>

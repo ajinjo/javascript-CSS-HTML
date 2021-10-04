@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<div id="wrap">
+    <title>Document</title>
+    <script>
+        window.onload=fucntion(){
+            var p2=document.getElementById('P2');
+            p2.parentNode.style.color='blue';
+
+            p2.previousSibling.style.fontSize='20px';
+
+            p2.nextSibling.style.border='1px solid black';
+        }
+    </script>
+
+    
+</head>
+<body>
+    <div id="wrap">
+		<p id="p1">content1</p><p id="p2">content2</p><p id="p3">content3</p>
+	</div>
+    
+</body>
+</html>

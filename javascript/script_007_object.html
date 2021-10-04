@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_007_object</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var data = 10; //number
+		var obj = new Number(data); //object
+		document.write(typeof data + "<br/>"); //number
+		document.write(typeof obj + "<br/>"); //object
+		
+		document.write(typeof data.toString()+"<br/>"); //string
+		document.write(typeof obj.toString()+"<br/>"); //string
+
+		//false
+		 document.write((obj.toString() 
+				    instanceof String)+"<br/>");
+		
+		 var str1=new String(data);
+		 var str2=new String(obj);
+		 
+		 document.write(typeof str1 +"<br/>"); //object
+		 document.write(typeof str2 +"<br/>"); //object
+		 
+		 //true
+		 document.write((str1 instanceof String) +"<br/>");
+		 //true
+		 document.write((str2 instanceof String) +"<br/>");
+		
+		 /*
+		   Integer it=new Integer(10);
+		   int num=it.intValue();
+		 */
+		 
+		 document.write(typeof obj.valueOf() +"<br/>"); //number
+		 document.write(typeof str1.valueOf()+"<br/>"); //string
+	
+		 /*
+		 number  => new Number(number)
+		 string  => new String(string)
+		 
+		 new Number(number).valueOf() => number
+		 new String(string).valueOf() => string
+		*/
+		
+		 </script>
+</body>
+</html>
+
+
+
+
+

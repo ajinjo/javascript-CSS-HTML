@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+   <!--
+       제어문
+       1 선택문 : if~else, switch~case
+       2 반복문 : for, while, do~while, for~in
+       3 기타 : break
+
+   -->
+
+   <script type="text/javascript">
+      var data = 2;
+      if (data%2==0) {
+          document.write('짝수');
+          document.write(data);
+      }else{
+          document.write('홀수');
+      }
+
+
+      document.write('<hr/>');
+
+      switch (data%2){
+          case 0 :
+            document.write('짝수');
+            break;   // switch~case문을 완전히 빠져 나온다.
+          case 1 :
+            document.write('홀수');
+      }
+
+      document.write('<hr/>');
+      var arr=[10, 20, 30, 40, 50];
+
+      //for(초기식; 조건식; 증감식){ 수행할 문장 }
+      for(var i = 0; i <= 4; i++){
+          document.write(arr[i] + '<br/>');
+      }
+
+      document.write('<hr/>');
+
+      for (var index in arr) {
+          document.write(arr[index]+'<br/>');
+
+      }
+
+        document.write('<hr/>');
+          
+      var j=0;
+      while(j<=4){
+        document.write(arr[j]+'<br/>');
+        j++;
+
+      }
+
+   document.write('<hr/>');
+
+   var k=0;
+   do{
+     document.write(arr[j]+'<br/>');
+     k++;
+   }while(k<=4);
+      
+   document.write('<hr/>')
+  // 합계 최초 : 30이상까지만 
+  // 1 2 3 4 5 
+
+   var plus=0;
+   for (var i = 1;  ; i++){
+       plus = plus + i;
+       if (plus >= 30) {
+           break; //반복문을 완전히 빠져나와서 다음 문장을 수행한다. 
+       }
+   }
+
+   document.write('i=' + i + ',plus=' + plus + '<br/>');
+
+   document.write('<hr/>');
+   function process(){
+       for(var m=1; m<=2; m++){
+           document.write(m)
+       }
+
+       document.write('inner m='+m);
+
+   }
+
+   process();
+   // document.write(m); //
+
+   document.write('<hr/>');
+   for(var n=1; n<=10; n++){
+
+    if (n%3!=0){
+        continue;
+    }
+    
+    document.write(n+'<br/>');
+
+   }
+   </script>
+</body>
+</html>
+

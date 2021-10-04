@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+    <script type="text/javascript">
+    /*
+		연산자
+		1 산술연산자
+		2 문자결합연산자 (+)
+		3 대입연산자
+		4 증감연산자
+		5 비교연산자 (===,!==,==,!=)
+		6 논리연산자
+		7 삼항조건연산자
+		8 데이터타입연산자 (typeof, instanceof)
+
+		타입오브와 인스턴스오브 알아야함 
+		 */
+
+
+         var x = 10;
+         var y = '10';
+         document.write(typeof(x)+'    '+typeof(y)+'<br/>');
+
+         // 값만 비교
+         document.write('x==y : '+(x==y)+'<br/>');   //true
+
+         // 값과 데이터 타입을 비교
+		 document.write('x==y : '+(x===y));    //false
+
+
+         document.write(typeof(x)+'<br/>');
+
+		 var nb = new Number(10);
+         document.write(typeof(nb)+'<br/>'); //object
+		 documnet.write((nb instanceof Number)+'<br.>');
+
+		 var arr = [1,2,3];
+		 document.write(typeof(arr)+'<br/>'); //object
+		 document.write(  (arr instanceof Array)+'<br/>');
+
+		 var k=3;
+		 // k++;
+		 ++k;   //파이썬에서는 k=k+1이라고함 이거를 스크립트에서는 간단하게증가연산자사용
+		 document.write('k='+k+'<br/>');
+
+		 var sum=0;
+		 var i=1;  
+		 //sum=sum+ ++i;   //0 + 2 변수앞에있을대뒤에있을때 처리되는순서가달라진다는거 조심 
+		 sum=sum+ i++ ;    //0 + 1  증감연산자가 하나의문장에서 여러개의 연산자와 같이사용될때에는 증가연산자가 변수앞에있냐뒤에있느냐에따라 처리순서가달라진다 
+		 document.write('sum=' + sum + 'i=' + i + '<br/>');
+		 
+</script>
+</body>
+
+</html>
+

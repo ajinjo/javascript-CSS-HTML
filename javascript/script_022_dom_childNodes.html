@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    window.lonload=function(){
+        var wrap = document.getElementById('wrap');
+        var divChildNode=wrap.childNodes;
+        //7
+        console.log(divChildNode.length);
+        //NodeList
+        console.log(divChildNode);
+
+        var divChildren=wrap.children;
+        console.log(divChildren.length);
+
+        console.log(divChildren);
+        
+
+
+    }
+</script>
+<body>
+    <div id="wrap">
+		<p>content</p>
+		<a href="">세미나 장소</a>
+		<span><a href="">정보</a></span>
+	</div>
+
+</body>
+</html>

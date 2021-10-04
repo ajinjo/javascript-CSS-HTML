@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_015_Array</title>
+</head>
+<body>
+ <script type="text/javascript">
+ var fruits = [ "Banana", "Orange", "Apple", "Mango" ];
+ document.write(typeof fruits.toString() + "<br/>");
+ document.write(typeof String(fruits) + "<br/>");
+ document.write("<hr/>");
+ 
+ //Banana,Orange,Apple,Mango
+ document.write(fruits.toString() + "<br/>");
+ 
+ //Banana,Orange,Apple,Mango
+ document.write(fruits.join() + "<br/>"); 
+ 
+ //string
+ document.write(typeof fruits.join() + "<br/>");
+ 
+ //Banana*Orange*Apple*Mango
+ document.write(fruits.join('*') + "<br/>");
+ document.write("<hr/>");
+ 
+ fruits[4]="Kiwi";
+ document.write(fruits + "<br/>");
+ 
+ document.write(fruits.push("Melon") + "<br/>"); //6
+ //Banana,Orange,Apple,Mango,Kiwi,Melon
+ document.write(fruits + "<br/>");
+ //Melon
+ document.write(fruits.pop() + "<br/>");
+ 
+ document.write(fruits+"<br/>");
+ document.write("<hr/>");
+ 
+ var fruits2=[ "Banana", "Orange", "Apple", "Mango" ];
+ //Orange,Apple
+ document.write(fruits2.slice(1,3)+"<br/>");
+ //Banana,Orange,Apple,Mango
+ document.write(fruits2);
+ document.write("<hr/>");
+ 
+//Apple
+//2인덱스부터 1개를 삭제하고 "Lemon","Kiwi"데이터를 삽입한다.
+document.write(fruits2.splice(2,1,"Lemon","Kiwi")
+		                         +"<br/>");
+//Banana,Orange,Lemon,Kiwi,Mango
+document.write(fruits2);
+document.write("<hr/>");
+
+var myGirls = [ "Cecilie", "Lone" ];
+var myBoys = [ "Emil", "Tobias", "Linus" ];
+//Cecilie,Lone,Emil,Tobias,Linus
+document.write(myGirls.concat(myBoys) + "<br/>");
+//object
+document.write(typeof myGirls.concat(myBoys) + "<br/>");
+//true
+document.write((myGirls.concat(myBoys) instanceof Array) + "<br/>");
+document.write("<hr/>");
+
+//Banana,Kiwi,Lemon,Mango,Orange
+document.write(fruits2.sort() + "<br/>");
+document.write(fruits2 + "<br/>");
+//Orange,Mango,Lemon,Kiwi,Banana
+document.write(fruits2.sort().reverse() + "<br/>");
+document.write("<hr/>");
+
+var point = [ 40, 100, 1, 5, 10 ];
+//40,100,1,5,10
+document.write(point + "<br/>");
+
+//1,10,100,40,5
+document.write(point.sort() + "<br/>");
+
+//1,5,10,40,100
+document.write(point.sort(function(a,b){
+	return a-b;
+}));
+document.write("<br/>");
+
+//100,40,10,5,1
+document.write(point.sort(function(a,b){
+	return b-a;
+}));
+document.write("<hr/>");
+
+var data = new Array(2, 2, 3);
+
+function getSum(total, num) {
+	return total + num;
+}
+
+document.write(data.reduce(getSum)+"<br/>"); //7
+
+var numbers = [4, 9, 16, 25];
+//2,3,4,5
+document.write(numbers.map(Math.sqrt)+"<br/>");
+
+function myFunction(num){
+	return num*num;
+}
+//16,81,256,625
+document.write(numbers.map(myFunction)+"<br/>");
+document.write("<hr/>");
+
+var fruits3=[ "Banana", "Orange", "Apple", "Mango" ];
+fruits3.unshift("Lemon");
+//Lemon,Banana,Orange,Apple,Mango
+document.write(fruits3+"<br/>");
+
+//Lemon
+document.write(fruits3.shift()+"<br/>");
+document.write("<hr/>");
+
+var fruits4=[ "Banana", "Orange", "Apple", "Mango" ];
+//2인덱스에 0번째 인덱스부터  요소를 복사한다.
+//fruits4.copyWithin(2, 0);
+//Banana,Orange,Banana,Orange
+//document.write(fruits4+"<br/>");
+
+//fruits4.copyWithin(2, 1);
+//Banana,Orange,Orange,Apple
+//document.write(fruits4+"<br/>");
+
+fruits4.copyWithin(2, 3);
+//Banana,Orange,Mango,Mango
+document.write(fruits4+"<br/>");
+document.write("<hr/>");
+
+var numbers2 = [4, 9, 16, 25];
+function myGet(item, index){
+	//[0]=4
+	document.write("["+index+"]="+item+"<br/>"); 
+}
+
+
+numbers2.forEach(myGet);
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            border-width: 0
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+            color: rgb(44, 20, 20);
+        }
+        
+        #gallery {
+            width: 350px;
+            margin: 30px auto;
+            border: 1px solid #999;
+        }
+        
+        #gallery h1 {
+            text-align: center;
+        }
+        
+        #gallery img {
+            border: 1px solid #666;
+        }
+        
+        #gallery #photo {
+            text-align: center;
+            /* background-color: yellow; */
+        }
+        
+        #gallery ul {
+            width: 800px;
+            margin: 0 auto;
+            background-color: aqua;
+        }
+        
+        #gallery ul li {
+            width: 100px;
+            float: left;
+            text-align: center;
+        }
+        
+        #photo_list {
+            width: 300px;
+            margin: 10px auto;
+            /* border:1px solid red; */
+            overflow: hidden;   /*여기에 주석걸어보면 이미지 촤르륵나와*/
+        }
+        
+        .btn_wrap {
+            clear: both;
+            text-align: center;
+        }
+        
+        .btn_wrap a {
+            font-weight: bolder;
+            font-size: 25px;
+        }
+
+        .wrap{
+            width:500px;
+            height:500px;
+            border:1px solid black;
+            margin-left:200px;
+
+
+        }
+
+        .move{
+            width:100px;
+            height:100px;
+            border:1px solid red;
+            margin-left:-100px;
+
+        }
+
+        </style>
+
+<script type="text/javascript">
+    window.onload = function(){
+
+        var list_zone = document.getElementById("inner_list");
+        var ul_li = list_zone.children;
+        for(var i =0; i<ul_li.length; i++){
+            ul_li[i].children[0].onclick=function(){
+              var ph = document.getElementById('photo').children[0];
+              ph.src = this.href;
+
+              //<a>를 클릭했을 때 링크가 되지 않도록 한다.
+              return false;
+            }
+        }
+ 
+    ////////////////////////////////////////////
+    /* 다음 버튼을 클릭했을 때 */
+    var m_num=0;
+    
+    var b_btn=document.getElementById('next_btn');
+    b_btn.onclick=function(){
+        m_num++;
+        if(m_num >= ul_li.length - 3)
+              return false;
+
+        m_num++;   //m_num--;
+        
+
+        list_zone.style.marginLeft=-100*m_num+'px';
+        //<a>를 클릭했을 때 링크가 되지 않도록 한다. 
+        return false;
+
+
+    }
+
+    /* 이전 버튼을 클릭했을 때 */
+    var f_btn=document.getElementById('before_btn');
+    f_btn.onclick=function(){
+        if(m_num==0)
+            return false;
+
+        m_num++;
+
+        list_zone.style.marginLeft=-100*m_num+'px';
+        //<a>를 클릭했을 때 링크가 되지 않도록 한다. 
+            return false;
+
+
+    }
+
+
+
+
+}
+  </script>
+
+
+</head>
+<body>
+	<div id="gallery">
+		<h1>동해안 갤러리</h1>
+		<p id="photo">
+			<img src="C:\study\workspace_front\jsdemo\images\images\pic_1.jpg" width="320" alt="" />
+		</p>
+		<!-- width: 300px -->
+		<div id="photo_list">
+			<!-- width:800px -->
+			<ul id="inner_list">
+				<li><a href="C:\study\workspace_front\jsdemo\images\images\pic_1.jpg"> <img
+						src="C:\study\workspace_front\jsdemo\images\images\pic_t1.jpg" alt="사진1" /></a></li>
+				<li><a href="C:\study\workspace_front\jsdemo\images\images\pic_2.jpg"> <img
+						src="C:\study\workspace_front\jsdemo\images\images\pic_t2.jpg" alt="사진2" /></a></li>
+				<li><a href="C:\study\workspace_front\jsdemo\images\images\pic_3.jpg"> <img
+						src="C:\study\workspace_front\jsdemo\images\images\pic_t3.jpg" alt="사진3" /></a></li>
+				<li><a href="C:\study\workspace_front\jsdemo\images\images\pic_4.jpg"> <img
+						src="C:\study\workspace_front\jsdemo\images\images\pic_t4.jpg" alt="사진4" /></a></li>
+				<li><a href="C:\study\workspace_front\jsdemo\images\images\pic_5.jpg"> <img
+						src="C:\study\workspace_front\jsdemo\images\images\pic_t5.jpg" alt="사진5" /></a></li>
+				<li><a href="C:\study\workspace_front\jsdemo\images\images\pic_6.jpg"> <img
+						src="C:\study\workspace_front\jsdemo\images\images\pic_t6.jpg" alt="사진6" /></a></li>
+				<li><a href="C:\study\workspace_front\jsdemo\images\images\pic_7.jpg"> <img
+						src="C:\study\workspace_front\jsdemo\images\images\pic_t7.jpg" alt="사진7" /></a></li>
+				<li><a href="C:\study\workspace_front\jsdemo\images\images\pic_8.jpg"> <img
+						src="C:\study\workspace_front\jsdemo\images\images\pic_t8.jpg" alt="사진8" /></a></li>
+			</ul>
+		</div>
+		<p class="btn_wrap">
+			<a href="#" id="before_btn">&lt;</a> <a href="#" id="next_btn">&gt;</a>
+		</p>
+	</div>
+</body>
+</html>

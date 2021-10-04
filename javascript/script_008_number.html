@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_008_number</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var data = 123;
+		var str = data.toString();
+		var obj = new Number(123);
+
+		//123,123,123
+		document.write(data + "," + str + "," + obj + "<br/>");
+
+		//number,string,object
+		document.write(typeof data + "," + typeof str + "," + typeof obj
+				+ "<br/>");
+
+		var res = data / "korea";
+		var res2 = data / "10";
+		//NaN(Not a Number)		
+		//NaN,12.3
+		document.write(res + "," + res2 + "<br/>");
+
+		var a = new Number(100);
+		var b = new Number(100);
+		var c = 100;
+		var d = 100;
+
+		//false, true
+		document.write((a == b) + "," + (c == d) + "<br/>");
+
+		//valueOf() : 객체에 저장된 값을 리턴한다.
+		var f = a.valueOf();
+		var g = b.valueOf();
+		//true
+		document.write((f == g) + "<br/>");
+
+		var k = 200;
+		//toString() : 숫자를 문자열로 변환
+		
+        //string
+		document.write(typeof k.toString() + "<br/>");
+		document.write(typeof (200).toString() + "<br/>");
+		document.write(typeof (true).toString()+"<br/>");
+		
+		 var arr=[10,20,30];
+		//10,20,30 10,20,30 string
+		 document.write(arr+" "+arr.toString()+"  "+
+			        typeof arr.toString()+"<br/>");
+		 
+		 var m="5.6";
+		 var p="3.5";	
+		 
+		 //5.43.5
+		 document.write((m+p)+"<br/>");
+		 
+		 //string
+		 document.write(typeof m.valueOf()+"<br/>");
+		 
+		 //Number(), parseInt(), parseFloat()은 Global에서 제공되는 함수
+		 document.write(Number(m)+" "+typeof Number(m)+"<br/>");
+		 
+		//5 number
+		 document.write(parseInt(m)+"  "+
+			        typeof parseInt(m)+"<br/>");
+		
+		//3.5 number
+		document.write(parseFloat(p)+"   "+
+			        typeof parseFloat(p)+"<br/>");
+		
+		var num=100;
+		num=100.5;
+		document.write(parseFloat(num)+"   "+
+		        typeof parseFloat(num)+"<br/>");
+	</script>
+</body>
+</html>
+
+
+
+
+
+
