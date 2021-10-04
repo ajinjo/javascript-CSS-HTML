@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>html_016_form</title>
+</head>
+<body>
+	<form action="html_016_process.jsp" method="get" 
+		enctype="application/x-www-form-urlencoded">
+		<fieldset>
+			<legend>납품자정보</legend>
+			<label for="fid">1. 납품자명</label> 
+			<input type="text" name="fid" id="fid" /><p></p>
+
+			<label for="fpass">2. email</label> 
+			<input type="email" name="femail" id="femail" /><p></p>
+
+      <label for="fpass">3. 홈페이지</label> 
+			<input type="url" name="fhome" id="fhome" />
+
+		</fieldset>
+	</form>
+	
+	 <form action="html_016_process.jsp" method="post"
+       enctype="application/x-www-form-urlencoded">
+       <fieldset>
+        <legend>납품정보</legend>
+        <label for="fid">· 상품명: </label> 
+        <input type="text" name="fid" id="fid" /><p></p>
+  
+        <label for="fcount">· 납품수량:</label> 
+        <input type="text" name="fcount" id="fcount" /><p></p>
+  
+        <label for="fgrade">· 납품등급:</label> 
+        <input type="text" name="fgrade" id="fgrade" /><p></p>
+
+        <label for="ftext">· 기타사항:</label> 
+        <input type="text" name="ftext" id="ftext" />
+  
+      </fieldset>
+         <input type="submit" value="send massage" />
+    </form> 
+</body>
+</html>
+
+
+
+
+
+
+
