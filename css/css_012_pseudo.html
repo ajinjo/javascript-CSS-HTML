@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css_012_pseudo</title>
+ <style type="text/css">
+ /*p라는 요소의 첫번째 라인만 스타일을 적용을 시켜줘라*/
+  p:first-line{
+      background-color:yellow;
+  }
+
+  p:before {
+     content : '====CSS start===='
+
+  }
+/* p라는 요소가 끝나고 맨뒤에 들어가게됨  */
+  p:after {
+      content : url('images/aa.jpg')
+  }
+ </style>
+</head>
+<body>
+<p>
+IE8 and Opera 4-6 only support the old, single-colon CSS syntax  Newer versions support the standard, double-colon syntax.
+IE8 and Opera 4-6 only support the old, single-colon CSS syntax  Newer versions support the standard, double-colon syntax. 
+IE8 and Opera 4-6 only support the old, single-colon CSS syntax  Newer versions support the standard, double-colon syntax.
+IE8 and Opera 4-6 only support the old, single-colon CSS syntax  Newer versions support the standard, double-colon syntax.
+IE8 and Opera 4-6 only support the old, single-colon CSS syntax  Newer versions support the standard, double-colon syntax.
+IE8 and Opera 4-6 only support the old, single-colon CSS syntax  Newer versions support the standard, double-colon syntax.
+IE8 and Opera 4-6 only support the old, single-colon CSS syntax  Newer versions support the standard, double-colon syntax.
+IE8 and Opera 4-6 only support the old, single-colon CSS syntax  Newer versions support the standard, double-colon syntax.
+</p>
+</body>
+</html>

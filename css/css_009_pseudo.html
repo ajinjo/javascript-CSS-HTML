@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css_009_pseudo</title>
+<style type="text/css">
+
+/* 2번째 자식요소는 span이므로 스타일 적용이 안됨  */
+/* 두번째 자식요소로 사용되는게 p가아니라 span이기때문에 적용이안됨 */
+/* 주석처리하고 재적용해보면 됨 이번에는 모니터가 두번째요소로 사용돼서 */
+p:nth-child(2){
+	background-color:red;
+}
+</style>
+</head>
+<body>
+	<div>
+		<p>computer</p>
+		<!-- <span>test</span>-->
+		<p>monitor</p>
+		<p>television</p>
+		<p>desk</p>
+		<p>top</p>
+	</div>
+</body>
+</html>

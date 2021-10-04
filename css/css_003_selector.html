@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css_003_selector</title>
+<style type="text/css">
+ /* 0002 = 0001 + 0001 */
+ body h1 {color:red}
+
+ /* 0001 */
+h1 {color:orange}
+
+/* h1과 p 각각 0001*/
+h1, p{color:orchid}
+
+/* 쩜은 클래스를 의미 에이치원쩜클래스 에이치원이라는요소에서
+클래스가 블루로되어있을때 스타일을 적용해주라는 소리임 */
+/* 우선순위 0011 = 0001 + 0010 */
+h1.blue{color:pink}
+
+/* 0110 = 0100 + 0010 */
+#id1.blue{color:yellowgreen}
+
+/* !important는 우선순위 계산이 무시되고 무조건 적용된다.  */
+p{color:cornflowerblue !important}
+</style>
+</head>
+<body>
+	<h1>title1</h1>
+	<div>
+		<div>
+			<h1 class='blue'>title2</h1>
+		</div>
+	</div>
+	<p>우선순위는 요소들에 적용할 스타일이 중복될 때 
+	        적용되는 스타일을 계산하는 방법이다.</p>
+
+	<p>요소들에 스타일을 적용하기 위해서는 선택자를 지정해서 설정할 수 있다.</p>
+</body>
+</html>
+
+
+<!-- title1하고 title2하고 우선순위 비교하면
+어떤 요소에 스타일이 여러개 정의되어있으면
+우선순위 그때 따진다 따질때는 하나의 요소에
+스타일이 여러개 정의되어있을때 그때 우선순윌ㄹ 따져서
+하면된다 -->

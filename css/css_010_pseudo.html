@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>css_010_pseudo</title>
+<style type="text/css">
+/* 짝수인덱스에만 스타일을 적용시키라는 소리임 */
+p:nth-child(even){
+	background-color:red;
+}
+
+/* p라는 요소가 자식요소로 사용되었을때 스타일적용해줘라*/
+p:nth-of-type(even){
+	color:blue;
+}
+
+</style>
+</head>
+<body>
+	<div>
+		<p>computer</p>       <!--1-->     <!--1-->
+		<span>test</span>       <!--2 짝수인데 스팬이니까 적용안됨-->
+		<p>monitor</p>       <!--3-->     <!--2 p:nth-of-type이거는 p라는 자식요소만 찾음 -->
+		<p>television</p>       <!--4-->     <!--3-->
+		<p>desk</p>       <!--5-->     <!--4-->
+		<p>top</p>       <!--6-->     <!--5-->
+	</div>
+</body>
+</html>
